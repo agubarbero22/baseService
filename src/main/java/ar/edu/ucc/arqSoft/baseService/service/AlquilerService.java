@@ -1,6 +1,7 @@
 package ar.edu.ucc.arqSoft.baseService.service;
 
 import java.util.Calendar;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,10 +50,12 @@ public class AlquilerService {
 	}
 
 
-	//public List<AlquilerResponseDto> getAllAlquileres() {
+	public List<Alquiler> getAllAlquileres() {
 		
-	//	return null;
-	//}
+		List<Alquiler> alquilerresponse = alquilerDao.getAll();
+		
+		return alquilerresponse;
+	}
 
 
 	public AlquilerResponseDto getaAlquilerById(Long id) {
